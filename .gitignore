@@ -1,0 +1,21 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Local dependency/build folders if tooling is added later
+node_modules/
+coverage/
+.cache/
+
+# Local archive kept out of the first public history
+old/

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Beri">
+    <meta name="author" content="Petra">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Beri</title>
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link href="BeriMobile.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="beri-shell">
+      <aside class="beri-sidebar">
+        <div class="beri-mobile-top">
+          <div class="beri-brand">
+            <span class="glyphicon glyphicon-book beri-brand-icon" aria-hidden="true"></span>
+            <span class="beri-brand-text" id="brandName"></span>
+          </div>
+          <button type="button" class="beri-menu-toggle collapsed" data-toggle="collapse" data-target="#beriSidebarMenu" aria-expanded="false" aria-controls="beriSidebarMenu">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            <span class="sr-only">Menü</span>
+          </button>
+        </div>
+
+        <div id="beriSidebarMenu" class="beri-sidebar-menu collapse in">
+          <div class="beri-active-student">
+            <p class="beri-active-student-label" id="activeStudentLabel"></p>
+            <p class="beri-active-student-name" id="activeStudentName"></p>
+          </div>
+
+          <ul class="nav nav-pills nav-stacked masthead-nav">
+            <li><a data-toggle="tab" href="#practice" id="navPractice"></a></li>
+            <li class="beri-nav-has-children">
+              <a data-toggle="tab" href="#stories" id="navStories" aria-expanded="false"></a>
+              <ul id="storiesSubnav" class="beri-subnav" aria-hidden="true"></ul>
+            </li>
+            <li><a data-toggle="tab" href="#settings" id="navSettings"></a></li>
+            <li class="active"><a data-toggle="tab" href="#progress" id="navProgress"></a></li>
+            <li><a data-toggle="tab" href="#about" id="navIntro"></a></li>
+            <li><a data-toggle="tab" href="#contact" id="navContact"></a></li>
+          </ul>
+
+          <div class="beri-sidebar-tip">
+            <p id="sidebarTip"></p>
+            <img id="sidebarMascot" src="images/mobile.jpg" alt="Beri">
+          </div>
+        </div>
+      </aside>
+
+      <main class="beri-main">
+        <div class="tab-content">
+          <div id="about" class="tab-pane fade">
+            <section class="beri-card beri-hero">
+              <div class="beri-hero-copy">
+                <p class="beri-eyebrow" id="introEyebrow"></p>
+                <h1 class="cover-heading" id="introHeading"></h1>
+                <p class="lead" id="introLead"></p>
+                <h3 id="aboutUsageHeading"></h3>
+                <div class="lead" id="aboutUsageText"></div>
+              </div>
+              <div class="beri-hero-art">
+                <img id="parrotBeriIntro" src="images/mobile.jpg" alt="Beri">
+              </div>
+            </section>
+          </div>
+
+          <div id="practice" class="tab-pane fade">
+            <section class="beri-card practice-card">
+              <div class="practice-header">
+                <div>
+                  <p class="beri-eyebrow" id="practiceStudentLabel"></p>
+                  <h1 class="cover-heading" id="contentTitle"></h1>
+                  <h3 id="levelName"></h3>
+                </div>
+                <div class="practice-stats">
+                  <div class="practice-stat">
+                    <span class="practice-stat-label" id="counterLabel"></span>
+                    <span id="counter" class="practice-stat-value">0</span>
+                  </div>
+                  <div class="practice-stat">
+                    <span class="practice-stat-label" id="practiceTodayPointsLabel"></span>
+                    <span id="practiceTodayPoints" class="practice-stat-value">0</span>
+                  </div>
+                  <div class="practice-stat">
+                    <span class="practice-stat-label" id="scoreLabel"></span>
+                    <span id="score" class="practice-stat-value">0</span>
+                  </div>
+                </div>
+              </div>
+
+              <img id="parrotBeri" class="practice-mascot" src="images/mobile.jpg" alt="Beri">
+              <div id="word" class="main-text"></div>
+              <p class="lead" id="practiceInstruction"></p>
+              <p class="practice-helper" id="practiceHint"></p>
+
+              <p class="lead">
+                <input type="button" class="btn btn-primary btn-lg practice-button" id="btnNaprej" value="" onclick="read()">
+                <button type="button" class="btn btn-default btn-lg practice-next-level-button" id="practiceNextLevelBtn"></button>
+              </p>
+            </section>
+          </div>
+
+          <div id="stories" class="tab-pane fade">
+            <section class="beri-card story-card">
+              <div class="practice-header">
+                <div>
+                  <p class="beri-eyebrow" id="storiesEyebrow"></p>
+                  <h1 class="cover-heading" id="storiesHeading"></h1>
+                  <h3 id="storyLevelName"></h3>
+                </div>
+              </div>
+
+              <div class="story-meta">
+                <h3 id="storyTitle"></h3>
+                <p id="storyPrompt" class="story-prompt"></p>
+              </div>
+
+              <div id="storyText" class="main-text story-text"></div>
+
+              <section class="story-question-card">
+                <p id="storyQuestionPrompt" class="story-question-prompt"></p>
+                <div id="storyAnswerButtons" class="story-answer-buttons"></div>
+                <p id="storyFeedback" class="story-feedback"></p>
+                <button type="button" class="btn btn-primary story-next-button" id="storyNextBtn"></button>
+              </section>
+            </section>
+          </div>
+
+          <div id="progress" class="tab-pane fade in active">
+            <section class="beri-card progress-top-card">
+              <div class="student-card">
+                <p class="beri-eyebrow" id="studentHeading"></p>
+                <h2 id="progressTitle"></h2>
+                <p class="student-helper" id="progressStudentHelp"></p>
+              </div>
+
+              <div class="summary-grid">
+                <article class="summary-card">
+                  <span class="summary-icon summary-icon-gold glyphicon glyphicon-star" aria-hidden="true"></span>
+                  <div>
+                    <p class="summary-label" id="summaryTotalLabel"></p>
+                    <p class="summary-value" id="summaryTotalScore">0</p>
+                  </div>
+                </article>
+                <article class="summary-card">
+                  <span class="summary-icon summary-icon-green glyphicon glyphicon-record" aria-hidden="true"></span>
+                  <div>
+                    <p class="summary-label" id="summaryDaysLabel"></p>
+                    <p class="summary-value" id="summaryDays">0</p>
+                  </div>
+                </article>
+                <article class="summary-card">
+                  <span class="summary-icon summary-icon-blue glyphicon glyphicon-fire" aria-hidden="true"></span>
+                  <div>
+                    <p class="summary-label" id="summaryStreakLabel"></p>
+                    <p class="summary-value" id="summaryStreak">0</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="beri-card">
+              <h2 id="progressOverviewHeading"></h2>
+              <div id="levelProgressGrid" class="level-progress-grid"></div>
+              <p class="progress-legend" id="progressLegend"></p>
+            </section>
+
+            <div class="progress-bottom-grid">
+              <section class="beri-card">
+                <div class="section-header">
+                  <div>
+                    <h2 id="progressTimelineHeading"></h2>
+                    <p class="section-subtitle" id="progressTimelineSubtitle"></p>
+                  </div>
+                </div>
+                <div id="dailyHistoryChart" class="daily-history-chart"></div>
+                <div id="dailyHistoryLegend" class="daily-history-legend"></div>
+              </section>
+
+              <section class="beri-card today-card">
+                <div class="section-header">
+                  <h2 id="todayHeading"></h2>
+                  <p class="section-subtitle" id="todayDate"></p>
+                </div>
+
+                <div class="today-metric">
+                  <span class="today-icon summary-icon-gold glyphicon glyphicon-star" aria-hidden="true"></span>
+                  <div>
+                    <p class="today-label" id="todayPointsLabel"></p>
+                    <p class="today-value" id="todayPoints">0</p>
+                  </div>
+                </div>
+
+                <div class="today-metric">
+                  <span class="today-icon summary-icon-green glyphicon glyphicon-education" aria-hidden="true"></span>
+                  <div>
+                    <p class="today-label" id="todayLevelLabel"></p>
+                    <p class="today-value today-value-small" id="todayLevel">-</p>
+                  </div>
+                </div>
+
+                <div class="today-metric">
+                  <span class="today-icon summary-icon-blue glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+                  <div>
+                    <p class="today-label" id="todaySpeedLabel"></p>
+                    <p class="today-value today-value-small" id="todaySpeed">0</p>
+                  </div>
+                </div>
+
+                <div class="goal-card">
+                  <div class="goal-header">
+                    <span class="summary-icon summary-icon-gold glyphicon glyphicon-tower" aria-hidden="true"></span>
+                    <p class="today-label" id="todayGoalLabel"></p>
+                    <p class="goal-value" id="todayGoalValue"></p>
+                  </div>
+                  <div class="goal-track">
+                    <div id="todayGoalFill" class="goal-fill"></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div id="settings" class="tab-pane fade">
+            <section class="beri-card">
+              <div class="section-header">
+                <div>
+                  <p class="beri-eyebrow" id="settingsEyebrow"></p>
+                  <h1 id="settingsHeading"></h1>
+                </div>
+              </div>
+
+              <h3 id="studentSettingsHeading"></h3>
+              <label class="student-label" for="studentNameInput" id="studentNameLabel"></label>
+              <div class="student-form-row">
+                <input type="text" id="studentNameInput" class="form-control" list="studentNameList">
+                <datalist id="studentNameList"></datalist>
+                <button type="button" id="studentSaveBtn" class="btn btn-primary"></button>
+              </div>
+              <p class="student-helper" id="settingsStudentHelp"></p>
+
+              <h3 id="levelHeading"></h3>
+              <div id="levelButtons"></div>
+
+              <h3 id="languageHeading"></h3>
+              <label class="student-label" for="languageSelect" id="languageLabel"></label>
+              <div class="student-form-row">
+                <select id="languageSelect" class="form-control"></select>
+              </div>
+
+              <h3 id="optionsHeading"></h3>
+              <div class="settings-options">
+                <label class="setting-toggle" for="dash">
+                  <input type="checkbox" id="dash">
+                  <span id="dashLabel"></span>
+                </label>
+                <label class="setting-toggle" for="syllableColors">
+                  <input type="checkbox" id="syllableColors">
+                  <span id="syllableColorsLabel"></span>
+                </label>
+                <label class="setting-toggle" for="capital">
+                  <input type="checkbox" id="capital">
+                  <span id="capitalLabel"></span>
+                </label>
+                <label class="setting-toggle" for="gentleMode">
+                  <input type="checkbox" id="gentleMode">
+                  <span id="gentleModeLabel"></span>
+                </label>
+              </div>
+            </section>
+
+            <section class="beri-card progress-report-card">
+              <div class="section-header">
+                <div>
+                  <h2 id="settingsReportHeading"></h2>
+                  <p class="section-subtitle" id="settingsReportSubtitle"></p>
+                </div>
+                <button type="button" id="downloadReportBtn" class="btn btn-primary progress-report-download"></button>
+              </div>
+              <div id="progressReportTable" class="progress-report-table"></div>
+            </section>
+          </div>
+
+          <div id="contact" class="tab-pane fade">
+            <section class="beri-card">
+              <h1 id="contactHeading"></h1>
+              <p id="contactName"></p>
+              <p id="contactEmail"></p>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script>
+      (function () {
+        function loadScript(src, onload) {
+          var script = document.createElement("script");
+          script.src = src;
+          script.async = false;
+          script.onload = onload || function () {};
+          document.head.appendChild(script);
+        }
+
+        function loadScriptsSequentially(paths, onload) {
+          var queue = Array.isArray(paths) ? paths.slice() : [];
+
+          function next() {
+            if (queue.length === 0) {
+              (onload || function () {})();
+              return;
+            }
+
+            loadScript(queue.shift(), next);
+          }
+
+          next();
+        }
+
+        function resolveLocalePath(baseFolder, path) {
+          if (!path) return "";
+          if (/^(https?:)?\//.test(path) || /^[A-Za-z]:[\\/]/.test(path)) return path;
+          if (path.indexOf("locales/") === 0) return path;
+          return String(baseFolder || "").replace(/[\\/]$/, "") + "/" + path.replace(/^[\\/]/, "");
+        }
+
+        loadScript("locales/index.js", function () {
+          var params = new URLSearchParams(window.location.search);
+          var storedLang = "";
+
+          try {
+            storedLang = window.localStorage.getItem("beri_language") || "";
+          } catch (error) {}
+
+          var requested = (params.get("lang") || storedLang || document.documentElement.lang || "de").toLowerCase();
+          var locales = Array.isArray(window.BERI_LOCALES) ? window.BERI_LOCALES : [];
+          var selected = locales.find(function (locale) {
+            return String(locale.code || "").toLowerCase() === requested;
+          }) || locales[0] || {
+            code: requested,
+            label: requested,
+            folder: "locales/" + requested,
+            content: "content-" + requested + ".js",
+            ui: "ui-" + requested + ".js",
+            storiesManifest: "locales/" + requested + "/stories/manifest.js",
+            storiesIndex: "locales/" + requested + "/stories/index.js"
+          };
+
+          document.documentElement.lang = selected.code || requested;
+          window.BERI_CURRENT_LOCALE = selected;
+
+          try {
+            window.localStorage.setItem("beri_language", document.documentElement.lang);
+          } catch (error) {}
+
+          loadScript(selected.content, function () {
+            loadScript(selected.ui, function () {
+              var manifestPath = resolveLocalePath(selected.folder, selected.storiesManifest);
+              var storiesIndexPath = resolveLocalePath(selected.folder, selected.storiesIndex);
+
+              if (!manifestPath || !storiesIndexPath) {
+                loadScript("berilogic.js");
+                return;
+              }
+
+              loadScript(manifestPath, function () {
+                var manifest = window.BERI_STORY_MANIFEST || {};
+                var files = Array.isArray(manifest.files) ? manifest.files.map(function (path) {
+                  return resolveLocalePath(selected.folder, path);
+                }) : [];
+
+                loadScriptsSequentially(files, function () {
+                  loadScript(storiesIndexPath, function () {
+                    loadScript("berilogic.js");
+                  });
+                });
+              });
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
