@@ -1,5 +1,4 @@
 # Beri
-
 Beri is a small browser-based reading practice app for children learning to read. It is meant as an always-at-hand companion to book exercises, not a replacement for adult guidance or supervision. Children can practise short reading items regularly, while Beri keeps track of progress and gives reward points for consistency.
 
 The current content includes German and English reading practice, short comprehension stories, student profiles, daily progress tracking, and a gentle display mode. Beri is designed as an extensible reading-practice infrastructure where additional languages, levels, stories, and reading resources can be added over time.
