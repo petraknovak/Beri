@@ -135,6 +135,56 @@ window.BERI_CONTENT = {
     },
 
     {
+      id: "irregular-words",
+      label: "Frequent words",
+      levels: [
+        {
+          id: 24,
+          label: "Common words",
+          scoringUnit: "word",
+          items: [
+            "a","an","the",
+            "I","you","he","she","it","we","they",
+            "me","him","her","us","them",
+            "my","your","his","its","our","their",
+            "am","is","are","was","were","be","been","being",
+            "do","does","did","have","has","had",
+            "can","could","will","would","should","may","might","must",
+            "I'm","you're","he's","she's","it's","we're","they're",
+            "don't","doesn't","didn't","isn't","aren't","wasn't","weren't",
+            "haven't","hasn't","hadn't","can't","couldn't","won't","wouldn't","shouldn't",
+            "this","that","these","those","there","here",
+            "who","what","where","when","why","how",
+            "and","or","but","if","so","because",
+            "of","to","in","on","at","for","with","from","by","as",
+            "not","no","yes","all","some","any","many","more","very","only",
+            "one","two","said","says","go","goes","come"
+          ]
+        },
+        {
+          id: 25,
+          label: "Heart-word phrases",
+          items: [
+            "the dog","a big cat","one small fish","said the child",
+            "you are here","they were there","where are you",
+            "what do you see","who is there","I was happy",
+            "many little birds","does it go","she says yes",
+            "to the house","of the day"
+          ]
+        },
+        {
+          id: 26,
+          label: "Common irregular verbs",
+          items: [
+            "said","says","does","goes","gone","done",
+            "was","were","have","give","live","come","some",
+            "could","would","should","put","pull","walk","talk"
+          ]
+        }
+      ]
+    },
+
+    {
       id: "long-vowels",
       label: "Long vowels",
       levels: [
@@ -322,43 +372,6 @@ window.BERI_CONTENT = {
             "not → note","pin → pine","rob → robe","cut → cute",
             "man → main","pan → pain","can → cane",
             "cot → coat","run → rain"
-          ]
-        }
-      ]
-    },
-
-    {
-      id: "irregular-words",
-      label: "Frequent irregular words",
-      levels: [
-        {
-          id: 24,
-          label: "Very frequent function words",
-          items: [
-            "the","a","of","to","do","is","was","are","were",
-            "you","your","they","their","there","where","who",
-            "what","when","why","said","says","does","goes",
-            "one","once","two","only","many","any","very"
-          ]
-        },
-        {
-          id: 25,
-          label: "Heart-word phrases",
-          items: [
-            "the dog","a big cat","one small fish","said the child",
-            "you are here","they were there","where are you",
-            "what do you see","who is there","I was happy",
-            "many little birds","does it go","she says yes",
-            "to the house","of the day"
-          ]
-        },
-        {
-          id: 26,
-          label: "Common irregular verbs",
-          items: [
-            "said","says","does","goes","gone","done",
-            "was","were","have","give","live","come","some",
-            "could","would","should","put","pull","walk","talk"
           ]
         }
       ]
