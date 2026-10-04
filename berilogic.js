@@ -150,7 +150,7 @@
       mastery: [
         "Strong reading round.",
         "Very fluent reading.",
-        "You read many items.",
+        "You got through a lot. Well done!",
         "Well done."
       ],
       tooFast: [

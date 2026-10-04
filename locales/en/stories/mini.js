@@ -84,13 +84,13 @@ window.BERI_registerStoryCategory({
             "A duck runs fast.",
             "The duck runs left.",
             "The duck runs right.",
-            "Max runs after the duck.",
-            "Max slips in mud.",
+            "Tim runs after the duck.",
+            "Tim slips in mud.",
             "The duck looks proud."
           ],
           question: {
             prompt: "Who slips in mud?",
-            correct: "Max.",
+            correct: "Tim.",
             wrong: ["The duck.", "A fish.", "The moon.", "A chair."]
           }
         }

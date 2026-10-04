@@ -5,43 +5,142 @@ window.BERI_CONTENT = {
   groups: [
     {
       id: "foundations",
-      label: "Foundations",
+      label: "Letters and sounds (optional)",
       levels: [
         {
           id: 1,
-          label: "Frequent letters",
+          label: "Vowels",
           items: [
-            "a","e","i","o","u",
-            "m","n","s","t","p","l","r","f",
-            "b","d","h","c","g"
+            "a","e","i","o","u"
           ]
         },
         {
           id: 2,
-          label: "Confusable letters",
+          label: "Alphabet",
           items: [
-            "b","d","p","q",
-            "m","n","u","v","w",
-            "i","l","t","f"
+            "a","b","c","d","e","f","g","h","i",
+            "j","k","l","m","n","o","p","q","r",
+            "s","t","u","v","w","x","y","z"
           ]
-        },
+        }
+      ]
+    },
 
+    {
+      id: "irregular-words",
+      label: "Frequent words",
+      levels: [
         {
-          id: 3,
-          label: "Common consonant digraphs",
+          id: 24,
+          label: "First words",
+          scoringUnit: "word",
           items: [
-            "sh","ch","th","wh","ck","ng",
-            "ph","tch","dge"
+            "a","an","the","I","you","he","she",
+            "it","we","they","me","my","your","am",
+            "is","are","have","has","do","does"
           ]
         },
         {
-          id: 4,
-          label: "Common consonant blends",
+          id: 38,
+          label: "First-word combinations",
+          scoringUnit: "word",
           items: [
-            "bl","cl","fl","gl","pl","sl",
-            "br","cr","dr","fr","gr","pr","tr",
-            "sc","sk","sm","sn","sp","st","sw",
-            "scr","spl","spr","str"
+            "I am","you are","he is","she is",
+            "it is","we are","they are","I have",
+            "you have","he has","she has","we have",
+            "they have","I do","you do","he does",
+            "she does","we do","they do"
+          ]
+        },
+        {
+          id: 34,
+          label: "More common words",
+          scoringUnit: "word",
+          items: [
+            "him","her","us","them","his","its","our",
+            "their","was","were","be","been","being","had",
+            "did","I'm","you're","he's","she's","it's","we're",
+            "they're","isn't","aren't","wasn't","weren't","haven't","hasn't",
+            "hadn't","don't","doesn't","didn't","can","could","will",
+            "would","should","may","might","must","can't","couldn't",
+            "won't","wouldn't","shouldn't","this","that","these","those",
+            "there","here","who","what","where","when","why",
+            "how","and","or","but","if","so","because",
+            "of","to","in","on","at","for","with",
+            "from","by","as","not","no","yes","all",
+            "some","any","many","more","very","only","one",
+            "two","said","says","go","goes","come",
+            "mine","yours","hers","ours","theirs"
+          ]
+        },
+        {
+          id: 36,
+          label: "Word combinations",
+          scoringUnit: "word",
+          items: [
+            "I am","you are","he is","she is","it is","we are","they are",
+            "I have","you have","he has","she has","it has","we have","they have",
+            "I do","you do","he does","she does","we do","they do",
+            "I was","you were","he was","she was","it was","we were","they were",
+            "I had","you had","he had","she had","we had","they had",
+            "I can","you can","he can","she can","we can","they can",
+            "I will","you will","he will","she will","we will","they will",
+            "this is mine","this is yours","this is his","this is hers",
+            "this is ours","this is theirs","that is mine","that is yours",
+            "these are ours","those are theirs",
+            "it is here","it is there","here it is","there it is",
+            "there is one","there are two",
+            "who is it","who are you","what is this","what is that",
+            "is it yours","are these ours","you and I","you and me",
+            "with me","with you","for us","for them",
+            "I am not","he is not","we are not","they are not",
+            "I don't","he doesn't","she doesn't","we don't"
+          ]
+        },
+        {
+          id: 26,
+          label: "Common irregular verbs",
+          items: [
+            "be – was/were – been",
+            "bring – brought – brought",
+            "buy – bought – bought",
+            "come – came – come",
+            "do – did – done",
+            "drink – drank – drunk",
+            "eat – ate – eaten",
+            "feel – felt – felt",
+            "find – found – found",
+            "get – got – got/gotten",
+            "give – gave – given",
+            "go – went – gone",
+            "have – had – had",
+            "hear – heard – heard",
+            "know – knew – known",
+            "leave – left – left",
+            "make – made – made",
+            "put – put – put",
+            "read – read – read",
+            "run – ran – run",
+            "say – said – said",
+            "see – saw – seen",
+            "sit – sat – sat",
+            "sleep – slept – slept",
+            "speak – spoke – spoken",
+            "stand – stood – stood",
+            "take – took – taken",
+            "tell – told – told",
+            "think – thought – thought",
+            "write – wrote – written"
+          ]
+        },
+        {
+          id: 39,
+          label: "Irregular-verb phrases",
+          scoringUnit: "word",
+          items: [
+            "I saw it","he went","she came","we ate",
+            "they ran","I have seen","she has eaten","we have taken",
+            "he has done it","they have gone","I had a drink","she gave it"
           ]
         }
       ]
@@ -55,130 +154,146 @@ window.BERI_CONTENT = {
           id: 5,
           label: "Short A word families",
           items: [
-            "-at-: c-at, h-at, m-at, s-at, fl-at",
-            "-an-: c-an, f-an, m-an, p-an, r-an, pl-an",
-            "-ap-: c-ap, m-ap, n-ap, t-ap, cl-ap, tr-ap",
-            "-am-: h-am, j-am, r-am, sl-am",
-            "-ack-: b-ack, p-ack, r-ack, sn-ack, tr-ack"
+            "c-a-t","h-a-t","m-a-t","s-a-t","r-a-t","b-a-t","c-a-n",
+            "f-a-n","m-a-n","p-a-n","r-a-n","c-a-p","m-a-p","t-a-p",
+            "h-a-m","j-a-m","b-a-g","d-a-d","s-a-d"
+          ]
+        },
+        {
+          id: 40,
+          label: "Short A phrases",
+          scoringUnit: "word",
+          items: [
+            "a cat","the cat","my hat","a mat",
+            "a sad man","a cat sat","a man ran","I have jam",
+            "my bag","a cap","a map","a cat ran"
           ]
         },
         {
           id: 6,
           label: "Short E word families",
           items: [
-            "-ed-: b-ed, r-ed, l-ed, f-ed, s-ed",
-            "-en-: h-en, m-en, p-en, t-en, th-en, wh-en",
-            "-et-: g-et, y-et, j-et, l-et, n-et, p-et, s-et, w-et",
-            "-ell-: b-ell, f-ell, s-ell, t-ell, w-ell, sh-ell",
-            "-est-: b-est, r-est, t-est, w-est, ch-est"
+            "b-e-d","r-e-d","f-e-d","h-e-n","m-e-n","p-e-n","t-e-n",
+            "g-e-t","j-e-t","l-e-t","n-e-t","p-e-t","s-e-t","v-e-t",
+            "w-e-t","l-e-g"
+          ]
+        },
+        {
+          id: 41,
+          label: "Short E phrases",
+          scoringUnit: "word",
+          items: [
+            "a red bed","the red hen","a pen","my pet",
+            "a wet hat","a wet cat","ten men","a red cap",
+            "get a pen","let me","the hen sat","the cat is wet"
           ]
         },
         {
           id: 7,
           label: "Short I word families",
           items: [
-            "-it-: b-it, f-it, h-it, k-it, s-it, spl-it",
-            "-in-: b-in, f-in, p-in, w-in, th-in, sp-in",
-            "-ip-: d-ip, h-ip, l-ip, r-ip, s-ip, t-ip",
-            "-ick-: k-ick, l-ick, p-ick, s-ick, st-ick, qu-ick",
-            "-ill-: h-ill, m-ill, p-ill, w-ill, st-ill"
+            "b-i-t","f-i-t","h-i-t","k-i-t","s-i-t","b-i-n","f-i-n",
+            "p-i-n","w-i-n","d-i-p","h-i-p","l-i-p","r-i-p","s-i-p",
+            "t-i-p","b-i-g","p-i-g","d-i-g"
+          ]
+        },
+        {
+          id: 42,
+          label: "Short I phrases",
+          scoringUnit: "word",
+          items: [
+            "a big pig","a big bin","a pin","my lip",
+            "his hip","a bit of jam","sit here","we can sit",
+            "I can dig","the pig is big","a wet pig","a big cat"
           ]
         },
         {
           id: 8,
           label: "Short O word families",
           items: [
-            "-ot-: c-ot, d-ot, h-ot, p-ot, sp-ot",
-            "-op-: h-op, m-op, p-op, t-op, sh-op, st-op",
-            "-og-: d-og, f-og, l-og, fr-og",
-            "-ock-: cl-ock, r-ock, s-ock, bl-ock",
-            "-ob-: c-ob, j-ob, r-ob, s-ob"
+            "c-o-t","d-o-t","h-o-t","p-o-t","h-o-p","m-o-p","p-o-p",
+            "t-o-p","d-o-g","f-o-g","l-o-g","c-o-b","j-o-b","r-o-b",
+            "s-o-b","n-o-d"
+          ]
+        },
+        {
+          id: 43,
+          label: "Short O phrases",
+          scoringUnit: "word",
+          items: [
+            "a hot dog","a hot pot","a log","the fog",
+            "my dog","a red dot","on the bed","a mop",
+            "a top","the dog ran","we can hop","the pot is hot"
           ]
         },
         {
           id: 9,
           label: "Short U word families",
           items: [
-            "-un-: b-un, f-un, r-un, s-un, sp-un",
-            "-ug-: b-ug, d-ug, h-ug, m-ug, r-ug, s-ug",
-            "-ut-: b-ut, c-ut, h-ut, n-ut, sh-ut",
-            "-ub-: c-ub, r-ub, t-ub, cl-ub",
-            "-ump-: b-ump, j-ump, l-ump, p-ump, st-ump"
+            "b-u-n","f-u-n","r-u-n","s-u-n","b-u-g","d-u-g","h-u-g",
+            "m-u-g","r-u-g","b-u-t","c-u-t","h-u-t","n-u-t","c-u-b",
+            "r-u-b","t-u-b","c-u-p","m-u-d","j-u-g"
+          ]
+        },
+        {
+          id: 44,
+          label: "Short U phrases",
+          scoringUnit: "word",
+          items: [
+            "a hot bun","the sun","a bug","a mug",
+            "a red rug","a cup","a mud hut","in the tub",
+            "a big hug","we can run","a bug dug","the rug is wet"
           ]
         },
         {
           id: 10,
           label: "Mixed short vowels",
           items: [
-            "c-a-t","b-a-g","m-a-p","s-a-n-d","st-a-m-p","tr-a-ck","bl-a-ck","gr-a-b","fl-a-g","sn-a-p",
-            "h-a-t","m-a-t","r-a-t","b-a-t","c-a-n","m-a-n","p-a-n","r-a-n","j-a-m","d-a-d",
-            "s-a-d","h-a-m","c-a-p","t-a-p","cl-a-p","tr-a-p","b-a-ck","p-a-ck","sn-a-ck","cr-a-sh",
-
-            "b-e-d","l-e-g","p-e-n","d-e-sk","ch-e-st","r-e-d","w-e-t","n-e-t","sh-e-d","dr-e-ss",
-            "m-e-n","t-e-n","h-e-n","b-e-ll","t-e-ll","w-e-ll","s-e-ll","g-e-t","p-e-t","y-e-s",
-            "n-e-st","b-e-st","r-e-st","t-e-st","n-e-ck","sp-e-ll","sm-e-ll","st-e-p","l-e-ft",
-
-            "s-i-t","f-i-sh","l-i-p","m-i-l-k","br-i-ck","k-i-ck","sp-i-n","th-i-n","st-i-ck","sw-i-m",
-            "b-i-g","p-i-g","d-i-g","w-i-n","f-i-n","p-i-n","s-i-x","h-i-ll","w-i-ll","f-i-ll",
-            "r-i-ng","s-i-ng","cl-i-p","tr-i-p","dr-i-p","sk-i-p","gr-i-n","th-i-ck","qu-i-ck","sl-i-p",
-
-            "d-o-g","f-o-x","b-o-x","fr-o-g","cl-o-ck","r-o-ck","st-o-p","sh-o-p","dr-o-p","bl-o-ck",
-            "h-o-t","p-o-t","sp-o-t","t-o-p","m-o-p","p-o-p","l-o-g","f-o-g","j-o-b","m-o-m",
-            "n-o-t","g-o-t","r-o-b","h-o-p","cr-o-p","fl-o-p","st-o-ck","bl-o-g",
-
-            "s-u-n","c-u-p","m-u-d","tr-u-ck","l-u-n-ch","r-u-n","h-u-g","dr-u-m","cl-u-b","st-u-ck",
-            "f-u-n","b-u-g","r-u-g","m-u-g","j-u-g","b-u-s","n-u-t","c-u-t","h-u-t","r-u-sh",
-            "d-u-ck","l-u-ck","p-u-ck","j-u-m-p","st-u-ff","tr-u-st","pl-u-g","cr-u-sh"
+            "c-a-t","b-a-g","m-a-p","s-a-n-d","st-a-m-p","tr-a-ck","bl-a-ck",
+            "gr-a-b","fl-a-g","sn-a-p","h-a-t","m-a-t","r-a-t","b-a-t",
+            "c-a-n","m-a-n","p-a-n","r-a-n","j-a-m","d-a-d","s-a-d",
+            "h-a-m","c-a-p","t-a-p","cl-a-p","tr-a-p","b-a-ck","p-a-ck",
+            "sn-a-ck","cr-a-sh","b-e-d","l-e-g","p-e-n","d-e-sk","ch-e-st",
+            "r-e-d","w-e-t","n-e-t","sh-e-d","dr-e-ss","m-e-n","t-e-n",
+            "h-e-n","b-e-ll","t-e-ll","w-e-ll","s-e-ll","g-e-t","p-e-t",
+            "y-e-s","n-e-st","b-e-st","r-e-st","t-e-st","n-e-ck","sp-e-ll",
+            "sm-e-ll","st-e-p","l-e-ft","s-i-t","f-i-sh","l-i-p","m-i-l-k",
+            "br-i-ck","k-i-ck","sp-i-n","th-i-n","st-i-ck","sw-i-m","b-i-g",
+            "p-i-g","d-i-g","w-i-n","f-i-n","p-i-n","s-i-x","h-i-ll",
+            "w-i-ll","f-i-ll","r-i-ng","s-i-ng","cl-i-p","tr-i-p","dr-i-p",
+            "sk-i-p","gr-i-n","th-i-ck","qu-i-ck","sl-i-p","d-o-g","f-o-x",
+            "b-o-x","fr-o-g","cl-o-ck","r-o-ck","st-o-p","sh-o-p","dr-o-p",
+            "bl-o-ck","h-o-t","p-o-t","sp-o-t","t-o-p","m-o-p","p-o-p",
+            "l-o-g","f-o-g","j-o-b","m-o-m","n-o-t","g-o-t","r-o-b",
+            "h-o-p","cr-o-p","fl-o-p","st-o-ck","bl-o-g","s-u-n","c-u-p",
+            "m-u-d","tr-u-ck","l-u-n-ch","r-u-n","h-u-g","dr-u-m","cl-u-b",
+            "st-u-ck","f-u-n","b-u-g","r-u-g","m-u-g","j-u-g","b-u-s",
+            "n-u-t","c-u-t","h-u-t","r-u-sh","d-u-ck","l-u-ck","p-u-ck",
+            "j-u-m-p","st-u-ff","tr-u-st","pl-u-g","cr-u-sh","f-l-a-t","p-l-a-n",
+            "s-l-a-m","r-a-c-k","t-h-e-n","w-h-e-n","f-e-l-l","s-h-e-l-l","w-e-s-t",
+            "s-p-l-i-t","l-i-c-k","p-i-c-k","s-i-c-k","m-i-l-l","p-i-l-l","s-t-i-l-l",
+            "s-o-c-k","s-p-u-n","s-h-u-t","b-u-m-p","l-u-m-p","p-u-m-p","s-t-u-m-p"
           ]
-        }
-      ]
-    },
-
-    {
-      id: "irregular-words",
-      label: "Frequent words",
-      levels: [
+        },
         {
-          id: 24,
-          label: "Common words",
+          id: 37,
+          label: "Short sentences",
           scoringUnit: "word",
           items: [
-            "a","an","the",
-            "I","you","he","she","it","we","they",
-            "me","him","her","us","them",
-            "my","your","his","its","our","their",
-            "am","is","are","was","were","be","been","being",
-            "do","does","did","have","has","had",
-            "can","could","will","would","should","may","might","must",
-            "I'm","you're","he's","she's","it's","we're","they're",
-            "don't","doesn't","didn't","isn't","aren't","wasn't","weren't",
-            "haven't","hasn't","hadn't","can't","couldn't","won't","wouldn't","shouldn't",
-            "this","that","these","those","there","here",
-            "who","what","where","when","why","how",
-            "and","or","but","if","so","because",
-            "of","to","in","on","at","for","with","from","by","as",
-            "not","no","yes","all","some","any","many","more","very","only",
-            "one","two","said","says","go","goes","come"
-          ]
-        },
-        {
-          id: 25,
-          label: "Heart-word phrases",
-          items: [
-            "the dog","a big cat","one small fish","said the child",
-            "you are here","they were there","where are you",
-            "what do you see","who is there","I was happy",
-            "many little birds","does it go","she says yes",
-            "to the house","of the day"
-          ]
-        },
-        {
-          id: 26,
-          label: "Common irregular verbs",
-          items: [
-            "said","says","does","goes","gone","done",
-            "was","were","have","give","live","come","some",
-            "could","would","should","put","pull","walk","talk"
+            "I see a cat.","I see a dog.","We see a pig.",
+            "They see a hen.","He has a hat.","She has a bag.",
+            "I have a pen.","We have a dog.","You have a cup.",
+            "They have a cat.","The cat has a mat.","The dog has a bed.",
+            "I see a red hat.","She has a red bag.","He has a big dog.",
+            "We see a big pig.","I eat a bun.","We eat jam.",
+            "He ate a bun.","She ate a bun.","I drink milk.",
+            "We drink milk.","He drank milk.","She had a cup of milk.",
+            "I fed the cat.","She fed the dog.","He fed the hen.",
+            "We fed the pig.","I found a map.","He found a pen.",
+            "She found a red cap.","We found a box.","I took my bag.",
+            "He took his hat.","She took her cup.","We took our map.",
+            "I made a bed.","She made a pot.","He made a box.",
+            "We made a hut."
           ]
         }
       ]
@@ -199,6 +314,19 @@ window.BERI_CONTENT = {
           ]
         },
         {
+          id: 45,
+          label: "Silent E sentences",
+          scoringUnit: "word",
+          items: [
+            "I have a cape.","She has a red cape.","He took the tape.",
+            "We found a pine.","I see a kite.","She has a robe.",
+            "He made a cube.","I found a note.","She gave me a note.",
+            "He has a cute dog.","We see a cute cat.","I took a bite.",
+            "She made a bed.","He has a tube.","I can make a cube.",
+            "We can take the kite."
+          ]
+        },
+        {
           id: 12,
           label: "Long A families",
           items: [
@@ -206,6 +334,19 @@ window.BERI_CONTENT = {
             "-ame-: c-ame, g-ame, n-ame, s-ame, fl-ame",
             "-ain-: br-ain, ch-ain, r-ain, tr-ain, pl-ain",
             "-ay-: d-ay, pl-ay, s-ay, st-ay, w-ay"
+          ]
+        },
+        {
+          id: 46,
+          label: "Long A sentences",
+          scoringUnit: "word",
+          items: [
+            "I can bake a cake.","She made a cake.","He ate the cake.",
+            "We have a game.","I can say my name.","She has the same hat.",
+            "I see a lake.","We see a snake.","He took the chain.",
+            "She saw a train.","We can play a game.","I can take the cake.",
+            "He has a chain.","We see a flame.","She gave me a cake.",
+            "I can make a game."
           ]
         },
         {
@@ -219,6 +360,19 @@ window.BERI_CONTENT = {
           ]
         },
         {
+          id: 47,
+          label: "Long E sentences",
+          scoringUnit: "word",
+          items: [
+            "I see a bee.","We see a green tree.","She saw the beach.",
+            "He had a dream.","We have a team.","I can read my name.",
+            "She has a happy baby.","He has a funny hat.","We see a green field.",
+            "I ate a piece of cake.","She took the green bag.","He can see the tree.",
+            "We can teach the baby.","I have a green pen.","She gave me a piece of cake.",
+            "He saw a thief."
+          ]
+        },
+        {
           id: 14,
           label: "Long I families",
           items: [
@@ -226,6 +380,19 @@ window.BERI_CONTENT = {
             "-ight-: br-ight, f-ight, l-ight, n-ight, r-ight, s-ight",
             "-ine-: f-ine, l-ine, m-ine, sh-ine, sp-ine",
             "-y-: by, my, try, fly, sky, why"
+          ]
+        },
+        {
+          id: 48,
+          label: "Long I sentences",
+          scoringUnit: "word",
+          items: [
+            "I see a bright light.","She has a fine hat.","He made a line.",
+            "We had a ride.","I can hide my bag.","She can fly a kite.",
+            "He took the right bag.","We see the sky.","I can see a pine.",
+            "She has a bright kite.","He took a bite.","We can try the game.",
+            "I can hide the kite.","She saw a wide lake.","He gave me a light.",
+            "We can hide the cake."
           ]
         },
         {
@@ -238,6 +405,19 @@ window.BERI_CONTENT = {
             "-old-: c-old, f-old, g-old, h-old, t-old",
             "-ue-: bl-ue, gl-ue, tr-ue, cl-ue",
             "-ew-: bl-ew, ch-ew, gr-ew, n-ew, thr-ew"
+          ]
+        },
+        {
+          id: 49,
+          label: "Long O and U sentences",
+          scoringUnit: "word",
+          items: [
+            "I see a boat.","She has a blue coat.","He ate some toast.",
+            "We can see the road.","I took the soap.","She made a joke.",
+            "He told a joke.","We have a new game.","I have a cold.",
+            "She has a blue cup.","He took the glue.","We found a clue.",
+            "I can chew my toast.","She gave me a new coat.","He can hold the boat.",
+            "We saw the snow."
           ]
         }
       ]
@@ -262,6 +442,16 @@ window.BERI_CONTENT = {
           ]
         },
         {
+          id: 50,
+          label: "Vowel-team phrases",
+          scoringUnit: "word",
+          items: [
+            "a green coat","the moon","a spoon","my room",
+            "the food","a good book","my foot","the street",
+            "we can wait","I can paint","we can read","look at me"
+          ]
+        },
+        {
           id: 17,
           label: "R-controlled vowels",
           items: [
@@ -273,6 +463,16 @@ window.BERI_CONTENT = {
           ]
         },
         {
+          id: 51,
+          label: "R-controlled phrases",
+          scoringUnit: "word",
+          items: [
+            "a car","a star","the park","a dark room",
+            "a fern","my sister","a bird","her shirt",
+            "a horse","a storm","the nurse","my purse"
+          ]
+        },
+        {
           id: 18,
           label: "Diphthongs",
           items: [
@@ -280,6 +480,16 @@ window.BERI_CONTENT = {
             "oy: b-oy, t-oy, j-oy, enj-oy",
             "ou: ou-t, cl-ou-d, h-ou-se, l-ou-d, r-ou-nd",
             "ow: b-ow, c-ow, d-ow-n, fl-ow-er, n-ow, t-ow-n"
+          ]
+        },
+        {
+          id: 52,
+          label: "Diphthong phrases",
+          scoringUnit: "word",
+          items: [
+            "a coin","a boy","his toy","a loud voice",
+            "a cloud","our house","a cow","the town",
+            "a flower","a round cake","join our team","sit down"
           ]
         },
         {
@@ -308,6 +518,83 @@ window.BERI_CONTENT = {
             "-oo- /ʌ/: bl-oo-d, fl-oo-d",
             "-oo- /ɔː/: d-oo-r, fl-oo-r"
           ]
+        },
+        {
+          id: 53,
+          label: "Vowel-pattern phrases",
+          scoringUnit: "word",
+          items: [
+            "a rough road","a tough game","a cough","a bear",
+            "a pear","some bread","my head","a great day",
+            "the school door","the floor","I can hear","we can learn"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "consonant-patterns",
+      label: "Consonant patterns",
+      levels: [
+        {
+          id: 3,
+          label: "Digraphs in words",
+          scoringUnit: "word",
+          items: [
+            "ship","shop","fish","chin","chip","much",
+            "thin","this","that","when","whip",
+            "back","duck","ring","sing"
+          ]
+        },
+        {
+          id: 54,
+          label: "Digraph phrases",
+          scoringUnit: "word",
+          items: [
+            "a ship","the shop","a fish","my chin",
+            "a chip","a thin cat","the duck","a ring",
+            "we can sing","when can we go","the duck is back","that is my fish"
+          ]
+        },
+        {
+          id: 4,
+          label: "Blends in words",
+          scoringUnit: "word",
+          items: [
+            "clap","flag","glad","plug","slip",
+            "brag","crab","drum","frog","grin","trip",
+            "scan","skip","snap","spot","stop","swim"
+          ]
+        },
+        {
+          id: 55,
+          label: "Blend phrases",
+          scoringUnit: "word",
+          items: [
+            "a flag","a crab","a drum","a frog",
+            "a grin","a trip","a spot","we can clap",
+            "we can skip","I can swim","stop here","I am glad"
+          ]
+        },
+        {
+          id: 35,
+          label: "Harder consonant patterns",
+          scoringUnit: "word",
+          items: [
+            "catch","match","edge","badge",
+            "black","press","smell",
+            "scrap","split","spring","strap"
+          ]
+        },
+        {
+          id: 56,
+          label: "Harder consonant phrases",
+          scoringUnit: "word",
+          items: [
+            "a match","the edge","my badge","a black cat",
+            "a scrap","the spring","a strap","we can catch it",
+            "press here","we can split it","a black bag","I can smell it"
+          ]
         }
       ]
     },
@@ -333,6 +620,16 @@ window.BERI_CONTENT = {
           ]
         },
         {
+          id: 57,
+          label: "Early-family phrases",
+          scoringUnit: "word",
+          items: [
+            "a flat hat","my plan","the shed","we can split it",
+            "a thin pin","the shop","a frog","a slug",
+            "a rug","a dog ran","the cat sat","a red hen"
+          ]
+        },
+        {
           id: 21,
           label: "High-yield rime families",
           items: [
@@ -346,6 +643,16 @@ window.BERI_CONTENT = {
             "-ur-: t-urn, b-urn, h-urt, n-urse, p-urse",
             "-ar-: st-ar, p-ark, d-ark, f-arm, ch-arm",
             "-old-: c-old, g-old, h-old, t-old, old"
+          ]
+        },
+        {
+          id: 58,
+          label: "Rime-family phrases",
+          scoringUnit: "word",
+          items: [
+            "a bright light","a snake","the train","a green screen",
+            "a gray tray","the road","the ground","the farm",
+            "a cold night","a gold chain","we can float","turn here"
           ]
         },
         {
@@ -365,6 +672,16 @@ window.BERI_CONTENT = {
           ]
         },
         {
+          id: 59,
+          label: "Irregular-family phrases",
+          scoringUnit: "word",
+          items: [
+            "we could go","you should come","where were you","some of us",
+            "it is done","none of them","we can try again","I have two",
+            "give it to me","who was there","my friend","what do you want"
+          ]
+        },
+        {
           id: 23,
           label: "Contrast families",
           items: [
@@ -372,6 +689,16 @@ window.BERI_CONTENT = {
             "not → note","pin → pine","rob → robe","cut → cute",
             "man → main","pan → pain","can → cane",
             "cot → coat","run → rain"
+          ]
+        },
+        {
+          id: 60,
+          label: "Contrast-family phrases",
+          scoringUnit: "word",
+          items: [
+            "a bit of cake","a bite of cake","we can hop","we can hope",
+            "a mad cat","we made it","a pin","a pine",
+            "a cut","a cute cat","a pan","the rain"
           ]
         }
       ]
@@ -387,6 +714,16 @@ window.BERI_CONTENT = {
           items: [
             "re-read","re-play","re-build","un-kind","un-fair","un-lock",
             "dis-like","dis-agree","pre-view","pre-heat","mis-read","mis-spell"
+          ]
+        },
+        {
+          id: 61,
+          label: "Prefix phrases",
+          scoringUnit: "word",
+          items: [
+            "re-read the book","re-play the game","re-build the hut","an un-kind man",
+            "an un-fair game","un-lock the door","I dis-like it","we dis-agree",
+            "a pre-view","pre-heat it","I mis-read it","I mis-spell it"
           ]
         },
         {
@@ -433,6 +770,16 @@ window.BERI_CONTENT = {
           ]
         },
         {
+          id: 62,
+          label: "Suffix phrases",
+          scoringUnit: "word",
+          items: [
+            "a help-ful teach-er","a care-ful read-er","a kind farm-er","a slow driv-er",
+            "a use-ful book","a wash-able coat","we are play-ing","she is sing-ing",
+            "he is jump-ing","our friend-ship","a paint-er","a thank-ful child"
+          ]
+        },
+        {
           id: 29,
           label: "Latin-based families",
           items: [
@@ -444,6 +791,17 @@ window.BERI_CONTENT = {
             "spect → in-spect → re-spect → spect-a-tor",
             "dict → pre-dict → dict-ion-ary → ver-dict",
             "rupt → in-ter-rupt → e-rupt → dis-rupt-ion"
+          ]
+        },
+        {
+          id: 63,
+          label: "Latin-family phrases",
+          scoringUnit: "word",
+          items: [
+            "the sign-al","an act-or","my sign-a-ture","a new de-sign",
+            "the port","we im-port","we ex-port","the in-form-a-tion",
+            "we con-struct","we in-spect","a spect-a-tor","the dict-ion-ary",
+            "we pre-dict","the dis-rupt-ion"
           ]
         }
       ]
@@ -538,6 +896,45 @@ window.BERI_CONTENT = {
             "The king had a long strong ring.",
             "The bird heard a strange word.",
             "The goat rode home on the road."
+          ]
+        },
+        {
+          id: 25,
+          label: "Heart-word phrases",
+          items: [
+            "the small dog","a big cat","one small fish","said the child",
+            "you are here","they were there","where are you",
+            "what do you see","who is there","I was happy",
+            "many little birds","does it go","she says yes",
+            "to the house","of the day",
+            "an old hat","a cup of milk","the two of us","one more time",
+            "this is mine","that is yours","these are red","those are blue",
+            "my little dog","your new book","his red cap","her blue bag",
+            "our small house","their big garden","its long tail","there it is",
+            "there is one","there are two","here you are","over there",
+            "I am here","he is kind","she is happy","it is cold",
+            "we are ready","you were right","he was tired","we were late",
+            "I have one","you have two","she has a dog","he has a cat",
+            "we had fun","they had lunch","I do too","he does too",
+            "did you see","does she know","do they want it","what does it do",
+            "I can help","you can come","we could try","could you help",
+            "he will come","we will see","I would like one","would you like some",
+            "you should rest","we should go","it may rain","you may sit here",
+            "she might come","we must go","I must try","can you see it",
+            "I'm at home","you're my friend","he's over there","she's with us",
+            "it's for you","we're at school","they're in bed","don't run",
+            "it doesn't fit","I didn't know","he isn't here","we aren't late",
+            "it wasn't me","they weren't ready","I haven't seen it","she hasn't come",
+            "I can't see","we couldn't go","it won't open","he wouldn't stop",
+            "who are they","what is that","where is it","when can we go",
+            "why is it wet","how are you","some of them","all of us",
+            "any more milk","many of them","only one left","very good work",
+            "yes you can","no thank you","not just yet","and then we went",
+            "you and me","this or that","small but strong","if you can",
+            "so do I","because it is cold","in the box","on the bed",
+            "at the door","for my friend","with your help","from our home",
+            "by the tree","as good as new","come with me","go to sleep",
+            "she goes home","he said no","who said that","what she says"
           ]
         },
         {
